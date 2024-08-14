@@ -1,0 +1,4 @@
+[
+ { "id": 1, "name": "Student A", "selectedArea": "Finance" },
+ { "id": 2, "name": "Student B", "selectedArea": "Marketing" }
+]

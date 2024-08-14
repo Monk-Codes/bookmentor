@@ -1,0 +1,18 @@
+[
+ { "id": 1, "name": "John Doe", "availableSlots": ["07:00-07:30", "07:30-08:00"], "area": "Finance" },
+ { "id": 2, "name": "Mike Brown", "availableSlots": ["09:00-09:30", "09:30-10:00"], "area": "Marketing" },
+ { "id": 3, "name": "Sarah Lee", "availableSlots": ["10:00-10:30", "10:30-11:00"], "area": "Technology" },
+ { "id": 4, "name": "Emily Clark", "availableSlots": ["11:00-11:30", "11:30-12:00"], "area": "Human Resources" },
+ { "id": 5, "name": "Daniel Smith", "availableSlots": ["12:00-12:30", "12:30-01:00"], "area": "Finance" },
+ { "id": 6, "name": "Olivia Johnson", "availableSlots": ["01:00-01:30", "01:30-02:00"], "area": "Marketing" },
+ { "id": 7, "name": "James Wilson", "availableSlots": ["02:00-02:30", "02:30-03:00"], "area": "Technology" },
+ { "id": 8, "name": "Sophia Garcia", "availableSlots": ["03:00-03:30", "03:30-04:00"], "area": "Human Resources" },
+ { "id": 9, "name": "David Martinez", "availableSlots": ["04:00-04:30", "04:30-05:00"], "area": "Finance" },
+ { "id": 10, "name": "Emma Hernandez", "availableSlots": ["05:00-05:30", "05:30-06:00"], "area": "Marketing" },
+ { "id": 11, "name": "Liam Brown", "availableSlots": ["06:00-06:30", "06:30-07:00"], "area": "Technology" },
+ { "id": 12, "name": "Ava Walker", "availableSlots": ["07:00-07:30", "07:30-08:00"], "area": "Human Resources" },
+ { "id": 13, "name": "Noah White", "availableSlots": ["08:00-08:30", "08:30-09:00"], "area": "Finance" },
+ { "id": 14, "name": "Isabella Lewis", "availableSlots": ["09:00-09:30", "09:30-10:00"], "area": "Marketing" },
+ { "id": 15, "name": "Mason Young", "availableSlots": ["10:00-10:30", "10:30-11:00"], "area": "Technology" },
+ { "id": 16, "name": "Mia King", "availableSlots": ["11:00-11:30", "11:30-12:00"], "area": "Human Resources" }
+]
