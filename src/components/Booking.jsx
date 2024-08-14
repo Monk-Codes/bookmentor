@@ -55,12 +55,12 @@ const Booking = () => {
  };
 
  return (
-  <div className="bg-blue-400 p-4 h-80 w-full rounded-lg shadow-md flex flex-col justify-center relative ">
-   <div className="p-4 justify-center flex flex-col relative">
+  <div className="bg-blue-400 p-4 h-full  w-full rounded-lg shadow-md flex flex-1 flex-col justify-center relative ">
+   <div className="p-2 justify-center flex flex-col ">
     <h2 className="text-xl font-bold mb-2">Book Appointment</h2>
-    <div className="">
+    <div className="mb-2 w-72">
      <label className="block mb-2 font-semibold">Select Mentor:</label>
-     <select value={selectedMentorId} onChange={(e) => setSelectedMentorId(e.target.value)} className="w-3/5 p-2 border-gray-300 rounded outline-none">
+     <select value={selectedMentorId} onChange={(e) => setSelectedMentorId(e.target.value)} className="w-full p-2 border-gray-300 rounded outline-none">
       <option value="">-- Select a Mentor --</option>
       {mentors.map((mentor) => (
        <option key={mentor.id} value={mentor.id}>
@@ -69,8 +69,9 @@ const Booking = () => {
       ))}
      </select>
     </div>
+
     {selectedMentor && (
-     <div className="mb-2">
+     <div className="mb-2 w-72">
       <label className="block mb-2 font-semibold">Select Time Slot:</label>
       <div className="flex flex-wrap gap-2">
        {selectedMentor.availableSlots.length === 0 ? (
@@ -85,7 +86,7 @@ const Booking = () => {
       </div>
      </div>
     )}
-    <div className="mb-2">
+    <div className="mb-2 w-72">
      <label className="block mb-2 font-semibold">Select Duration:</label>
      <select value={selectedDuration} onChange={(e) => setSelectedDuration(Number(e.target.value))} className="w-3/5 p-2 border-gray-300 rounded outline-none">
       {durations.map((duration) => (
