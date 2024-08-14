@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
+import mentorDB from "../db/mentors.json";
 
-// Dummy data for durations
 const durations = [30, 45, 60];
 
 const Booking = () => {
@@ -11,29 +11,20 @@ const Booking = () => {
  const [selectedSlot, setSelectedSlot] = useState("");
 
  useEffect(() => {
-  const fetchMentors = async () => {
-   try {
-    const response = await fetch("/db/mentors.json");
-    const data = await response.json();
-    setMentors(data);
-   } catch (error) {
-    console.error("Error fetching mentor data:", error);
-   }
-  };
-
-  fetchMentors();
+  // Set mentors from mentorDB
+  setMentors(mentorDB);
  }, []);
 
  useEffect(() => {
   if (selectedMentorId) {
-   const mentor = mentors.find((m) => m.id === parseInt(selectedMentorId));
+   const mentor = mentorDB.find((m) => m.id === parseInt(selectedMentorId));
    setSelectedMentor(mentor);
    setSelectedSlot(""); // Reset selected slot when mentor changes
   } else {
    setSelectedMentor(null);
    setSelectedSlot("");
   }
- }, [selectedMentorId, mentors]);
+ }, [selectedMentorId]);
 
  const handleBookAppointment = () => {
   if (!selectedMentor) {
@@ -53,6 +44,9 @@ const Booking = () => {
   // Calculate payment
   const payment = calculatePayment(selectedDuration);
   console.log("Total payment:", payment);
+
+  // Redirect to the payment page
+  window.open("/payment", "_blank");
  };
 
  const calculatePayment = (duration) => {
