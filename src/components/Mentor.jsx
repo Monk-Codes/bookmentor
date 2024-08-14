@@ -2,7 +2,7 @@ import mentorDB from "../db/mentors.json";
 
 const Mentor = () => {
  return (
-  <div className="bg-blue-300 p-4 rounded-lg shadow-md h-60 max-w-5xl flex flex-col relative overflow-y-scroll no-scrollbar">
+  <div className="bg-blue-300 p-4 rounded-lg shadow-md h-60  flex flex-col relative overflow-y-scroll no-scrollbar">
    <h2 className="text-xl font-bold p-1">Mentor Dashboard</h2>
    <ul className="list-disc flex flex-col p-2">
     {mentorDB.length === 0 ? (

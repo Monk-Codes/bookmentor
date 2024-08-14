@@ -55,7 +55,7 @@ const Booking = () => {
  };
 
  return (
-  <div className="bg-blue-400 p-4 h-full  max-w-5xl rounded-lg shadow-md flex flex-1 flex-col justify-center relative ">
+  <div className="bg-blue-400 p-4 h-full rounded-lg shadow-md flex flex-1 flex-col justify-center relative ">
    <div className="p-2 justify-center flex flex-col ">
     <h2 className="text-xl font-bold mb-2">Book Appointment</h2>
     <div className="mb-2 w-72">
