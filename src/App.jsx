@@ -1,5 +1,5 @@
 import Booking from "./components/Booking";
-import Mentor from "./components/mentor";
+import Mentor from "./components/Mentor";
 
 const App = () => {
  return (

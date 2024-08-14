@@ -46,7 +46,7 @@ const Booking = () => {
   console.log("Total payment:", payment);
 
   // Redirect to the payment page
-  window.open("/payment", "_blank");
+  window.open("/payments");
  };
 
  const calculatePayment = (duration) => {
