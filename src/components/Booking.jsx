@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import mentorDB from "../db/mentors.json";
 
 const durations = [30, 45, 60];
@@ -9,6 +10,7 @@ const Booking = () => {
  const [selectedMentor, setSelectedMentor] = useState(null);
  const [selectedDuration, setSelectedDuration] = useState(durations[0]);
  const [selectedSlot, setSelectedSlot] = useState("");
+ const navigate = useNavigate();
 
  useEffect(() => {
   // Set mentors from mentorDB
@@ -46,7 +48,13 @@ const Booking = () => {
   console.log("Total payment:", payment);
 
   // Redirect to the payment page
-  window.open("/payments");
+  navigate("/payment", {
+   state: {
+    selectedMentor,
+    selectedDuration,
+    isPreferredMentor: true,
+   },
+  });
  };
 
  const calculatePayment = (duration) => {
@@ -55,8 +63,8 @@ const Booking = () => {
  };
 
  return (
-  <div className="bg-blue-400 p-4 h-full rounded-lg shadow-md flex flex-1 flex-col justify-center relative ">
-   <div className="p-2 justify-center flex flex-col ">
+  <div className="bg-blue-400 p-4 h-full rounded-lg shadow-md flex flex-1 flex-col justify-center relative">
+   <div className="p-2 justify-center flex flex-col">
     <h2 className="text-xl font-bold mb-2">Book Appointment</h2>
     <div className="mb-2 w-72">
      <label className="block mb-2 font-semibold">Select Mentor:</label>
